@@ -72,5 +72,5 @@ const greetingVoice = () => {
      window.speechSynthesis.speak(greetMsg)
 }
 
-greetingVoice();
+greetingVoice()
 
