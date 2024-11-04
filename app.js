@@ -17,28 +17,27 @@ const getWord =  async (userWord) => {
 }
 
 const showWorddata = (word_data,userWord) => {
-     console.log(word_data);
      showContainer.innerHTML = "<h2>Finding Word...</h2>"
      setTimeout(() => {
                if(word_data.title == "No Definitions Found"){
-                      showContainer.innerHTML = "<h2>Word not found</h2>"
+                      showContainer.innerHTML = "<h2>Word not found?</h2>"
                       return false;
                }
              showContainer.innerHTML = `
 
                <div class='word-container'>
-               <p>Word : ${word_data[0].word}</p>
+               <p>Word - ${word_data[0].word}</p>
                 <div class='mic'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-2"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-2"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
                 </div>
                </div>
 
 
-               <p>PartofSpeech : ${word_data[0].meanings[0].partOfSpeech}</p>
-               <p>Definiton : ${word_data[0].meanings[0].definitions[0].definition}</p>
+               <p>PartofSpeech - ${word_data[0].meanings[0].partOfSpeech}</p>
+               <p>Definiton - ${word_data[0].meanings[0].definitions[0].definition}</p>
                <p>More About ${word_data[0].word}? <a href=${word_data[0].sourceUrls[0]}>Click Here!!</a></p>
              `
-             const wordSay = document.querySelector('.mic svg');
+             const wordSay = document.querySelector('.mic');
              wordSay.addEventListener('click',() => {
                SayWord(userWord,word_data);
              })
@@ -71,6 +70,12 @@ const greetingVoice = () => {
      greetMsg.lang = "en-US"
      window.speechSynthesis.speak(greetMsg)
 }
+
+document.addEventListener('keydown',(event) => {
+     if(event.key == "Enter"){
+          searchBtn.click()
+     }
+})
 
 greetingVoice()
 
