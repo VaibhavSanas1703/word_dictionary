@@ -18,7 +18,7 @@ body{
 .container{
      width: 450px;
      height: auto;
-     background: #F5F7F8;
+     background: #1a1a1a;
      display: flex;
      align-items: center;
      flex-direction: column;
@@ -41,7 +41,7 @@ body{
 }
 
 .headings h1{
-     color: royalblue;
+     color: #fff;
      font-weight: 700;
      text-align: center;
 }
@@ -65,14 +65,19 @@ h2{
      padding: 0 15px;
      font-size: 16px;
      background-color: transparent;
-     border: 1px solid royalblue;
-     color: #111;
+     border: 1px solid rgba(255,255,255,0.3);
+     color: #fff;
      border-radius: 20px;
      transition: border-color .5s;
 }
 
+/* .input-box input{
+     caret-color: rgba(255,255,255,0.2);
+} */
+
 ::placeholder{
-     color: royalblue;
+     color: rgba(255,255,255,0.6);
+     font-weight: 400;
 }
 
 .input-box button{
@@ -93,7 +98,13 @@ h2{
      flex-direction: column;
      margin: 0 0 0 10px;
      gap: 25px;
-     color: #111;
+     color: #fff;
+}
+
+.main-container h2{
+     text-align: center;
+     color: royalblue;
+     font-weight: 600;
 }
 
 .main-container p{
