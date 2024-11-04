@@ -1,0 +1,119 @@
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Onest',sans-serif;
+}
+
+body{
+     background: #111;
+     font-weight: 400;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+}
+
+.container{
+     width: 450px;
+     height: auto;
+     background: #1a1a1a;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: center;
+     padding: 30px 30px;
+     gap: 20px;
+     border-radius: 20px;
+     border: 1px solid rgba(255,255,255,0.2);
+}
+
+.headings h1{
+     color: #fff;
+     font-weight: 600;
+}
+
+h2{
+     font-weight: 400;
+}
+
+.input-box{
+     width: 100%;
+     height: 48px;
+     display: flex;
+     justify-content: space-evenly;
+     gap: 10px;
+}
+
+.input-box input{
+     width: 70%;
+     outline: none;
+     border: 0;
+     padding: 0 15px;
+     font-size: 16px;
+     background-color: #111;
+     border: 1px solid rgba(255,255,255,0.1);
+     color: #fff;
+     border-radius: 20px;
+}
+
+::placeholder{
+     color: rgba(255,255,255,0.5);
+}
+
+.input-box button{
+     width: 30%;
+     outline: none;
+     border: 0;
+     font-size: 16px;
+     background: royalblue;
+     color: #fff;
+     border-radius: 20px;
+     cursor: pointer;
+}
+
+.main-container{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     margin: 0 0 0 10px;
+     gap: 25px;
+     color: #fff;
+}
+
+.main-container p{
+     font-size: 17px;
+}
+
+.main-container p a{
+     font-size: 15px;
+     color: royalblue;
+     text-decoration: none;
+}
+
+.main-container p a:hover{
+     text-decoration: underline;
+}
+
+.main-container p svg{
+     vertical-align: middle;
+}
+
+.word-container{
+     width: 100%;
+     display: flex;
+     gap: 20px;
+     align-items: center;
+}
+
+.mic{
+     width: 34px;
+     height: 34px;
+     background: royalblue;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50px;
+     cursor: pointer;
+}
